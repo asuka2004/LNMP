@@ -1,10 +1,10 @@
 # Nginx 學習筆記  
 
-作業環境  OS: CentOS 7.9  Web:   
+作業環境  OS: CentOS 7.9    Web:   
 
-目前採用  官網載點 https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.37-el7-x86_64.tar.gz
+目前採用編譯的方式  官網載點 https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.37-el7-x86_64.tar.gz
 
-### Install DB Script
+### Install Nginx Script
 
 腳本內容: 下載Mysql、執行解壓縮及並初始化、環境設定、啟動DB等。 
 
