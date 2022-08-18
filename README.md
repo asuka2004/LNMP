@@ -1,8 +1,8 @@
 # Nginx 學習筆記  
 
-作業環境  OS: CentOS 7.9    Web:  Nginx 1.22
+作業環境  OS: CentOS 7.9    Web: Nginx 1.22
 
-採用編譯的方式  官網載點 https://nginx.org/download/nginx-1.22.0.tar.gz
+採用編譯的方式，官網載點 https://nginx.org/download/nginx-1.22.0.tar.gz
 
 ### Install Nginx
 
@@ -13,9 +13,9 @@
 解壓縮並開始編譯   
 tar zxvf  nginx-1.22.0.tar.gz
 
-./configure  - -user=nginx - -group=nginx - -prefix=/app/nginx-1.22.0 - - with-http_stub_status_module - -with-http_ssl_module
+./configure  --user=nginx --group=nginx --prefix=/app/nginx-1.22.0 --with-http_stub_status_module --with-http_ssl_module
 
-make ;make install
+make;make install
 
 新增常駐服務  cp nginx.service  /lib/systemd/system/nginx.service ; systemctl daemon-reload
 
@@ -25,7 +25,7 @@ make ;make install
 
 安裝keepalived及依賴包  yum install -y keepalived openssl-devel libnl libnl-devel  libnfnetlink-devel
 
-LVS 架構如下 前面兩台Nginx+LVS+Keepalived 反向代理到後端  後端一台Java跑不同Port 兼做兩台
+LVS架構如下圖，前面兩台Nginx+LVS+Keepalived，反向代理到後端，後端一台Java跑不同Port，兼做兩台
 
 可以參照 nginx-25.conf nginx-26.conf Keepalived-25.conf keepalived-26.conf  VIP是192.168.88.27 
 
@@ -34,7 +34,7 @@ LVS 架構如下 前面兩台Nginx+LVS+Keepalived 反向代理到後端  後端�
 
 ### Monitor LVS+Keepalived+Nginx Script
     
-腳本內容 只要偵測到Nginx掛掉  變會停止Keepalived 移到另一台正常Nginx
+腳本內容，只要偵測到Nginx掛掉，變會停止Keepalived，移到另一台正常Nginx
 
 加入排程
 
