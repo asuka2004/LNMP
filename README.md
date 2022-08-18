@@ -19,18 +19,21 @@ make ;make install
 
 新增常駐服務  cp nginx.service  /lib/systemd/system/nginx.service ; systemctl daemon-reload
 
-
+常用設定參照nginx.conf
 
 ### Install Keepalived 
+
+安裝keepalived及依賴包  yum install -y keepalived openssl-devel libnl libnl-devel  libnfnetlink-devel
+
+
+
+### Monitor LVS+Keepalived+Nginx Script
     
+腳本內容 只要偵測到Nginx掛掉  變會停止Keepalived 移到另一台正常Nginx
 
-### Monitor DB Script
-    
-1.執行monitor_mysql，監控Mysql 
+加入排程
 
-2.加入排程，指令如下
+echo "Monitor Nginx" >>/var/spool/cron/root
 
-echo "Monitor DB" >>/var/spool/cron/root
-
-echo */5 * * * * /use/bin/sh -x /root/project/Mysql/monitor/monitor_db.sh >>/var/spool/cron/root
+echo */5 * * * * /use/bin/sh -x /root/project/Nginx/monitor/monitor_nginx.sh >>/var/spool/cron/root
 
