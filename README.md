@@ -1,24 +1,28 @@
 # Nginx 學習筆記  
 
-作業環境  OS: CentOS 7.9    Web:   
+作業環境  OS: CentOS 7.9    Web:  Nginx 1.22
 
-目前採用編譯的方式  官網載點 https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.37-el7-x86_64.tar.gz
+採用編譯的方式  官網載點 https://nginx.org/download/nginx-1.22.0.tar.gz
 
-### Install Nginx Script
+### Install Nginx
 
-腳本內容: 下載Mysql、執行解壓縮及並初始化、環境設定、啟動DB等。 
+安裝依賴包  yum -y install  gcc  zlib  zlib-devel  pcre pcre-devel openssl openssl-devel
 
-下载Script脚本、Mysql程式、配置文件，執行install_mysql.sh
- 
-### CRUD Script
+下載安裝包  wget https://nginx.org/download/nginx-1.22.0.tar.gz
 
-1.執行create_data.sh 可以產生千萬級別的sql語法，並source /tmp/sql.txt匯入
- 
-2.執行crud_mysql.sh，可以新增、刪除、修改、查詢資料
+解壓縮並開始編譯   
+tar zxvf  nginx-1.22.0.tar.gz
 
-### Backup DB Script
+./configure  - -user=nginx - -group=nginx - -prefix=/app/nginx-1.22.0 - - with-http_stub_status_module - -with-http_ssl_module
+
+make ;make install
+
+新增常駐服務  cp nginx.service  /lib/systemd/system/nginx.service ; systemctl daemon-reload
+
+
+
+### Install Keepalived 
     
-執行bk_mysql.sh，備份、刪除、還原資料庫
 
 ### Monitor DB Script
     
