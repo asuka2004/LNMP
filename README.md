@@ -25,6 +25,7 @@ make ;make install
 
 安裝keepalived及依賴包  yum install -y keepalived openssl-devel libnl libnl-devel  libnfnetlink-devel
 
+![lvs](https://user-images.githubusercontent.com/37530440/185299345-e976f848-97b7-498a-a8de-d313720f8571.png)
 
 
 ### Monitor LVS+Keepalived+Nginx Script
