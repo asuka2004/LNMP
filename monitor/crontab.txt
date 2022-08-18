@@ -1,0 +1,3 @@
+echo "Monitor Nginx" >>/var/spool/cron/root
+
+echo */5 * * * * /use/bin/sh -x /root/project/Nginx/monitor/monitor_nginx.sh >>/var/spool/cron/root
