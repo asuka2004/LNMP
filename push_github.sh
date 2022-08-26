@@ -15,6 +15,6 @@ Log_Path=/root/tmp
 [ ! -d ${Log_Path} ] && mkdir -p ${Log_Path}
 
 	git add --all
-	read -p "Pleaes input reason:" $reason 
+	read -p "Pleaes input reason:" reason 
 	git commit -m "$reason"
 	git push origin master
