@@ -1,3 +1,4 @@
-echo "Monitor Nginx" >>/var/spool/cron/root
-
-echo */5 * * * * /use/bin/sh -x /root/project/Nginx/monitor/monitor_nginx.sh >>/var/spool/cron/root
+#Monitor Nginx&Keepalived by Kung
+*/5 * * * * /use/bin/sh /tool/script/monitor_nginx.sh>/dev/null 2>&1
+#Cut Nginx log by Kung
+00 00 * * * /bin/sh /tool/script/cut_nginxlog.sh >/dev/null 2>&1
