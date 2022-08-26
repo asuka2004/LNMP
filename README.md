@@ -18,7 +18,6 @@ make;make install
 
 新增常駐服務  cp nginx.service  /lib/systemd/system/nginx.service ; systemctl daemon-reload
 
-常用設定參照nginx.conf
 
 ### Install Keepalived 
 
