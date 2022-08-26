@@ -8,7 +8,7 @@
 
 安裝腳本 install_nginx.sh
 
-新增常駐服務  nginx.service 
+常駐服務  nginx.service 
 
 Nginx設定檔  nginx.conf
 
