@@ -2,7 +2,7 @@
 
 作業環境  OS: CentOS 7.9    Web: Nginx 1.18
 
-採用編譯的方式，官網載點 https://nginx.org/download/nginx-1.22.0.tar.gz
+採用編譯的方式，官網載點 https://nginx.org/download/nginx-1.18.0.tar.gz
 
 ### Install Nginx
 
