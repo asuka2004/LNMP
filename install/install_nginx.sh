@@ -22,7 +22,7 @@ Check_User(){
 	fi	
 }
 
-Update_Dept(){
+Update_Depend(){
 	yum -y install gcc zlib zlib-devel pcre pcre-devel openssl openssl-devel
 }
 
@@ -39,7 +39,7 @@ Install_Nginx(){
 
 }
 
-Setup_systemctl(){
+Setup_daemon(){
 	cp ${Soft_Path}/nginx.service /etc/systemd/system/nginx.service
 	systemctl daemon-reload
   	systemctl enable mysqld
@@ -48,8 +48,8 @@ Setup_systemctl(){
 
 main(){
 	Check_User
-	Update_Dept	
+	Update_Depend	
 	Install_Nginx
-	Setup_systemctl
+	Setup_daemon
 }
 main 

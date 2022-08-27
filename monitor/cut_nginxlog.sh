@@ -14,6 +14,7 @@ Basedir="/app/nginx"
 Nginxlog="$Basedir/logs"
 
 [ -d $Nginxlog ] && cd $Nginxlog || exit 1
+
 [ -f access_www.log ] || exit 1
 mv access_www.log ${DataFormat}_access_www.log
 
@@ -21,6 +22,5 @@ mv access_www.log ${DataFormat}_access_www.log
 mv access_blog.log ${DataFormat}_access_blog.log
 
 $Basedir/sbin/nginx -s reload
-
 
 
