@@ -6,11 +6,11 @@
 
 ### Install Nginx
 
-安裝腳本 install_nginx.sh
+1.安裝腳本 install_nginx.sh
 
-常駐服務  nginx.service 
+2.常駐服務  nginx.service 
 
-Nginx設定檔  nginx.conf
+3.Nginx設定檔  nginx.conf
 
 ### Install Keepalived 
 
@@ -26,11 +26,11 @@ VIP是192.168.88.27
 
 ### Monitor LVS+Keepalived+Nginx Script
     
-監控腳本 monitor_nginx.sh，只要偵測到Nginx掛掉，變會停止Keepalived，移到另一台正常Nginx
+1.監控腳本 monitor_nginx.sh，只要偵測到Nginx掛掉，變會停止Keepalived，移到另一台正常Nginx
 
-加入排程 crontab.txt
+2.加入排程 crontab.txt
 
-定時分割log檔 cut_nginxlog.sh
+3.定時分割log檔 cut_nginxlog.sh
 
-分析log檔resist_ddos.sh，IP達到數量便封鎖 
+4.分析log檔resist_ddos.sh，IP達到數量便封鎖 
 
