@@ -4,9 +4,9 @@ After=network.target
   
 [Service]
 Type=forking
-ExecStart=/app/nginx
-ExecReload=/app/nginx/sbin/nginx -s reload
-ExecStop=/app/nginx/sbin/nginx -s quit
+ExecStart=/app/nginx-1.18.0/sbin/nginx
+ExecReload=/app/nginx-1.18.0/sbin/nginx -s reload
+ExecStop=/app/nginx-1.18.0/sbin/nginx -s stop 
 PrivateTmp=true
   
 [Install]

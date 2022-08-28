@@ -32,7 +32,7 @@ Install_Nginx(){
 	useradd nginx -u 1111 -s /sbin/nologin -M
 	tar -zxvf  nginx-1.18.0.tar.gz 
 	cd nginx-1.18.0/
-	./configure --user=nginx --group=nginx --prefix=/app/nginx-1.22.0 --with-http_stub_status_module --with-http_ssl_module
+	./configure --user=nginx --group=nginx --prefix=/app/nginx-1.18.0 --with-http_stub_status_module --with-http_ssl_module
 	make;make install
 	ln -s ${App_Path}/nginx-1.18.0  ${App_Path}/nginx
 	echo 'export PATH="${App_Path}/nginx/sbin:$PATH"'>>/etc/profile
