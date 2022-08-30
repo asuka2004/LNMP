@@ -27,7 +27,7 @@ LVS架構如下圖，前面兩台Nginx+LVS+Keepalived，反向代理到後端，
 
 
 
-### Monitor LVS+Keepalived+Nginx Script
+### Monitor Keepalived+Nginx Script
     
 1.監控腳本 monitor_nginx.sh，只要偵測到Nginx掛掉，變會停止Keepalived，移到另一台正常Nginx
 
