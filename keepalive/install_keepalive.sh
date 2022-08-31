@@ -30,9 +30,9 @@ Install_Keepalived(){
 
 	if [ $? -eq 0 ] 
          then
-                 action "Success to install Nginx " /bin/true
+                 action "Success to install keepalived " /bin/true
         else
-                 action "Fail to install Nginx" /bin/false
+                 action "Fail to install keepalived" /bin/false
                  exit
         fi  
 }
@@ -49,8 +49,8 @@ Setup_Env(){
 
 Setup_daemon(){
         echo "Setup daemon. Please wait...................."
-  	systemctl enable mysqld
-	systemctl start mysqld
+  	systemctl enable keepalived 
+	systemctl start keepalived
 	if [ $? -eq 0 ] 
          then
                  action "Success to daemon " /bin/true

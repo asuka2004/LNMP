@@ -9,7 +9,6 @@ export PS4='++ ${LINENO}'
 export PATH=$PATH
 [ -f /etc/init.d/functions ] && . /etc/init.d/functions
 
-
 App_Path=/app
 [ ! -d ${App_Path} ] && mkdir -p ${App_Path}
 Soft_Path=/tool/software
@@ -17,9 +16,8 @@ Soft_Path=/tool/software
 Script_Path=/tool/script
 [ ! -d ${Script_Path} ] && mkdir -p ${Script_Path}
 Cron_Path=/var/spool/cron/root
-[ ! -d ${Cron_Path} ] && mkdir -p ${Cron_Path}
 
-if [ `grep "monitor_mysql" ${Cron_Path}|wc -l` -lt 1 ] 
+if [ `grep "Nginx" ${Cron_Path}|wc -l` -lt 1 ] 
  then
         echo "#Monitor Nginx" >>/var/spool/cron/root
         echo "*/5 * * * * /bin/sh  ${Script_Path}/monitor_nginx.sh>/dev/null 2>&1" >>/var/spool/cron/root
