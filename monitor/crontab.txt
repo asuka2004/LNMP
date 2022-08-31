@@ -1,4 +1,4 @@
 #Monitor Nginx&Keepalived by Kung
-*/5 * * * * /use/bin/sh /tool/script/monitor_nginx.sh>/dev/null 2>&1
+*/5 * * * * /usr/bin/sh /tool/script/monitor_nginx.sh>/dev/null 2>&1
 #Cut Nginx log by Kung
-00 00 * * * /bin/sh /tool/script/cut_nginxlog.sh >/dev/null 2>&1
+00 00 * * * /usr/bin/sh /tool/script/cut_nginxlog.sh >/dev/null 2>&1
