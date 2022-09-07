@@ -4,7 +4,6 @@
 
 採用編譯的方式，官網載點 https://nginx.org/download/nginx-1.18.0.tar.gz
 
-
 ### Install Nginx
 
 1.安裝腳本 install_nginx.sh
@@ -12,8 +11,6 @@
 2.常駐服務  nginx.service 
 
 3.Nginx設定檔  nginx.conf
-
-
 
 ### Install Keepalived 
 
@@ -29,5 +26,7 @@
 
 3.定時分割log檔 cut_nginxlog.sh
 
-4.IP達到數量便封鎖 resist_ddos.sh
+4.IP連線數過多就封鎖 resist_ddos.sh
+
+5.監控keepalived是否正常 monitor_splitbrain.sh
 
