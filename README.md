@@ -23,9 +23,6 @@ LVS架構如下圖，前面兩台Nginx+LVS+Keepalived，反向代理到後端，
 
 設定檔 nginx-25.conf nginx-26.conf Keepalived-25.conf keepalived-26.conf，VIP是192.168.88.27 
 
-![lvs](https://user-images.githubusercontent.com/37530440/185299345-e976f848-97b7-498a-a8de-d313720f8571.png)
-
-
 
 ### Monitor Keepalived+Nginx Script
     
