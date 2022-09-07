@@ -45,6 +45,7 @@ Setup_Env(){
 	echo '#Keepalived' >>/etc/rsyslog.conf
 	echo 'local0.*		/var/log/keepalived.log' >>/etc/rsyslog.conf 
 	systemctl restart rsyslog.service	
+	firewall-cmd --add-rich-rule='rule protocol value="vrrp" accept' --permanent
 }
 
 Setup_daemon(){
