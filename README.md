@@ -29,5 +29,5 @@
 
 3.定時分割log檔 cut_nginxlog.sh
 
-4.分析log檔resist_ddos.sh，IP達到數量便封鎖 
+4.IP達到數量便封鎖 resist_ddos.sh
 
