@@ -67,8 +67,8 @@ Setup_daemon(){
         echo "Setup daemon. Please wait...................."
 	cp ${Script_Path}/nginx.service /etc/systemd/system/nginx.service
 	systemctl daemon-reload
-  	systemctl enable mysqld
-	systemctl start mysqld
+  	systemctl enable nginx
+	systemctl start nginx
 	if [ $? -eq 0 ] 
          then
                  action "Success to daemon " /bin/true
@@ -78,6 +78,14 @@ Setup_daemon(){
         fi  
 
 
+}
+
+Setup_FW(){
+	systemctl enable firewalld
+	systemctl start firewalld 
+	firewall-cmd --add-port=80/tcp --permanent
+	firewall-cmd --add-port=443/tcp --permanent
+	firewall-cmd --reload	
 }
 
 main(){
@@ -90,6 +98,8 @@ main(){
 	Install_Nginx
 	echo -e "------------------------------------------------------------------- \n"   
 	Setup_daemon
+	echo -e "------------------------------------------------------------------- \n"   
+	Setup_FW
 	echo -e "Congratulations!!! Success to install ----------------------------- \n"   
 }
 main 
