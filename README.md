@@ -16,7 +16,7 @@
 
 1.安裝及設定keepalived腳本 install_keepalived.sh
 
-2.keepalived & nginx 設定檔   nginx-25.conf nginx-26.conf Keepalived-25.conf keepalived-26.conf，VIP是192.168.88.33 
+2.keepalived & nginx 設定檔   nginx-25.conf nginx-26.conf Keepalived-25.conf keepalived-26.conf，讓Nginx變成HA架構
 
 ### Monitor Keepalived+Nginx Script
     
