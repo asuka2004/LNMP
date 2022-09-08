@@ -90,5 +90,6 @@ main(){
 	Install_Nginx
 	echo -e "------------------------------------------------------------------- \n"   
 	Setup_daemon
+	echo -e "Congratulations!!! Success to install ----------------------------- \n"   
 }
 main 
