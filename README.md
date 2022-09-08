@@ -28,5 +28,3 @@
 
 4.IP連線數過多就封鎖 resist_ddos.sh
 
-5.監控keepalived是否正常 monitor_splitbrain.sh
-
