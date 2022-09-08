@@ -20,7 +20,7 @@
 
 ### Monitor Keepalived+Nginx Script
     
-1.監控腳本 monitor_nginx.sh，只要偵測到Nginx掛掉，變會停止Keepalived，移到另一台正常Nginx
+1.監控腳本 monitor_nginx.sh，只要偵測到Nginx掛掉，停止Keepalived，VIP移到另一台Nginx
 
 2.加入排程 crontab.txt
 
