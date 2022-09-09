@@ -101,6 +101,6 @@ main(){
 	Setup_daemon
 	echo -e "------------------------------------------------------------------- \n"   
 	Setup_FW
-	echo -e "Congratulations!!! Success to install ----------------------------- \n"   
+	echo -e "Congratulations!!! Success to install  \n"   
 }
 main 
