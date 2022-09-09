@@ -81,6 +81,7 @@ Setup_daemon(){
 }
 
 Setup_FW(){
+        echo "Setup Firewalld. Please wait...................."
 	systemctl enable firewalld
 	systemctl start firewalld 
 	firewall-cmd --add-port=80/tcp --permanent
