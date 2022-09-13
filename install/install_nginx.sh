@@ -76,8 +76,6 @@ Setup_daemon(){
                  action "Fail to daemon" /bin/false
                  exit
         fi  
-
-
 }
 
 Setup_FW(){
